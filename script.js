@@ -136,7 +136,7 @@ operateBtn.addEventListener("click", () => {
     display.textContent = total;
     num1 = total;
     num2 = "";
-    operater = "";
+    operator = "";
 })
 
 num0btn.addEventListener("click", () => {
