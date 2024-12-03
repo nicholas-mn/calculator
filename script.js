@@ -14,6 +14,7 @@ const num6btn = document.querySelector("#six");
 const num7btn = document.querySelector("#seven");
 const num8btn = document.querySelector("#eight");
 const num9btn = document.querySelector("#nine");
+const decimalBtn = document.querySelector("#decimal");
 
 const addBtn = document.querySelector("#add");
 const subtractBtn = document.querySelector("#subtract");
@@ -70,7 +71,23 @@ function operate(numOne, numTwo, chosenOperator) {
 }
 
 function clickNumber(number) {
-    
+    if (number == ".") {
+        
+        if (display.textContent.includes(".")) {
+            return;
+        }
+
+        if (!operator && !num1) {
+            display.textContent = "0.";
+            num1 = "0."
+            return;
+        } else if (!display.textContent) {
+            display.textContent = "0.";
+            return;
+        }
+
+    }
+
     if (!operator && !num1) {
         display.textContent = "";
         display.textContent += number.toString();
@@ -183,6 +200,10 @@ num8btn.addEventListener("click", () => {
 
 num9btn.addEventListener("click", () => {
     clickNumber(9);
+})
+
+decimalBtn.addEventListener("click", () => {
+    clickNumber(".");
 })
 
 clearBtn.addEventListener("click", () => {
