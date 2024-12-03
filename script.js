@@ -2,6 +2,25 @@ let num1;
 let operator;
 let num2;
 
+const num0btn = document.querySelector("#zero");
+const num1btn = document.querySelector("#one");
+const num2btn = document.querySelector("#two");
+const num3btn = document.querySelector("#three");
+const num4btn = document.querySelector("#four");
+const num5btn = document.querySelector("#five");
+const num6btn = document.querySelector("#six");
+const num7btn = document.querySelector("#seven");
+const num8btn = document.querySelector("#eight");
+const num9btn = document.querySelector("#nine");
+
+const addBtn = document.querySelector("#add");
+const subtractBtn = document.querySelector("#subtract");
+const multiplyBtn = document.querySelector("#multiply");
+const divideBtn = document.querySelector("#divide");
+const operateBtn = document.querySelector("#operate");
+
+const clearBtnm = document.querySelector(".button-clear");
+
 function add(numOne, numTwo) {
     return numOne + numTwo;
 }
