@@ -42,16 +42,16 @@ function divide(numOne, numTwo) {
 function operate(numOne, numTwo, chosenOperator) {
 
     switch(chosenOperator) {
-        case "+":
+        case "add":
             return add(numOne, numTwo);
 
-        case "-":
+        case "subtract":
             return subtract(numOne, numTwo);
 
-        case "*":
+        case "multiply":
             return multiply(numOne, numTwo);
 
-        case "/":
+        case "divide":
             return divide(numOne, numTwo);
     }
 
@@ -60,7 +60,7 @@ function operate(numOne, numTwo, chosenOperator) {
 function clickNumber(number) {
     
     if (!operator && !num1) {
-        display.textContent = ""
+        display.textContent = "";
         display.textContent += number.toString();
 
         num1 = number;
@@ -78,5 +78,13 @@ function clickNumber(number) {
         num2 = num2.toString() + number.toString();
 
     }
+
+}
+
+// choices: "add", "subtract", "multiply" or "divide"
+function clickOperator(operatorChoice) {
+    
+    display.textContent = "";
+    operator = operatorChoice;
 
 }
