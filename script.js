@@ -17,3 +17,21 @@ function multiply(numOne, numTwo) {
 function divide(numOne, numTwo) {
     return numOne / numTwo;
 }
+
+function operate(numOne, numTwo, chosenOperator) {
+
+    switch(chosenOperator) {
+        case "+":
+            return add(numOne, numTwo);
+
+        case "-":
+            return subtract(numOne, numTwo);
+
+        case "*":
+            return multiply(numOne, numTwo);
+
+        case "/":
+            return divide(numOne, numTwo);
+    }
+
+}
