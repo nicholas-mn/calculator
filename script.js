@@ -41,6 +41,18 @@ function divide(numOne, numTwo) {
 
 function operate(numOne, numTwo, chosenOperator) {
 
+    if (numOne == 0 || numTwo == 0) {
+        alert("You can not divide by 0 zero, dummy.")
+
+        num1 = "";
+        operator = "";
+        num2 = "";
+    
+        display.textContent = "0";
+
+        return;
+    }
+
     switch(chosenOperator) {
         case "add":
             return add(numOne, numTwo);
