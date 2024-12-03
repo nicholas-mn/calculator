@@ -75,7 +75,11 @@ function clickNumber(number) {
     } else {
         display.textContent += number.toString();
 
-        num2 = num2.toString() + number.toString();
+        if (!num2) {
+            num2 = number.toString();
+        } else {
+            num2 += number.toString();
+        }
 
     }
 
@@ -88,3 +92,68 @@ function clickOperator(operatorChoice) {
     operator = operatorChoice;
 
 }
+
+addBtn.addEventListener("click", () => {
+    clickOperator("add");
+})
+
+subtractBtn.addEventListener("click", () => {
+    clickOperator("subtract");
+})
+
+multiplyBtn.addEventListener("click", () => {
+    clickOperator("multiply");
+})
+
+divideBtn.addEventListener("click", () => {
+    clickOperator("divide");
+})
+
+operateBtn.addEventListener("click", () => {
+    const total = operate(+num1, +num2, operator);
+
+    display.textContent = total;
+    num1 = total;
+    num2 = "";
+    operater = "";
+})
+
+num0btn.addEventListener("click", () => {
+    clickNumber(0);
+})
+
+num1btn.addEventListener("click", () => {
+    clickNumber(1);
+})
+
+num2btn.addEventListener("click", () => {
+    clickNumber(2);
+})
+
+num3btn.addEventListener("click", () => {
+    clickNumber(3);
+})
+
+num4btn.addEventListener("click", () => {
+    clickNumber(4);
+})
+
+num5btn.addEventListener("click", () => {
+    clickNumber(5);
+})
+
+num6btn.addEventListener("click", () => {
+    clickNumber(6);
+})
+
+num7btn.addEventListener("click", () => {
+    clickNumber(7);
+})
+
+num8btn.addEventListener("click", () => {
+    clickNumber(8);
+})
+
+num9btn.addEventListener("click", () => {
+    clickNumber(9);
+})
