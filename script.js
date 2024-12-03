@@ -131,6 +131,12 @@ divideBtn.addEventListener("click", () => {
 })
 
 operateBtn.addEventListener("click", () => {
+    
+    if (!operator || !num2) {
+        alert("You need to choose an operator and second number");
+        return;
+    }
+    
     const total = operate(+num1, +num2, operator);
 
     display.textContent = total;
