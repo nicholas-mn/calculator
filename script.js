@@ -2,6 +2,8 @@ let num1;
 let operator;
 let num2;
 
+const display = document.querySelector(".display");
+
 const num0btn = document.querySelector("#zero");
 const num1btn = document.querySelector("#one");
 const num2btn = document.querySelector("#two");
@@ -51,6 +53,30 @@ function operate(numOne, numTwo, chosenOperator) {
 
         case "/":
             return divide(numOne, numTwo);
+    }
+
+}
+
+function clickNumber(number) {
+    
+    if (!operator && !num1) {
+        display.textContent = ""
+        display.textContent += number.toString();
+
+        num1 = number;
+
+        return;
+    } else if (!operator) {
+        display.textContent += number.toString();
+        
+        num1 = num1.toString() + number.toString();
+        
+        return;
+    } else {
+        display.textContent += number.toString();
+
+        num2 = num2.toString() + number.toString();
+
     }
 
 }
