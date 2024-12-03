@@ -89,6 +89,15 @@ function clickNumber(number) {
 function clickOperator(operatorChoice) {
     
     display.textContent = "";
+
+    if (operator) {
+        num1 = operate(+num1, +num2, operator);
+        display.textContent = "";
+
+        num2 = "";
+        operator = operatorChoice;
+    }
+
     operator = operatorChoice;
 
 }
