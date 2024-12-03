@@ -21,7 +21,7 @@ const multiplyBtn = document.querySelector("#multiply");
 const divideBtn = document.querySelector("#divide");
 const operateBtn = document.querySelector("#operate");
 
-const clearBtnm = document.querySelector(".button-clear");
+const clearBtn = document.querySelector(".button-clear");
 
 function add(numOne, numTwo) {
     return numOne + numTwo;
@@ -156,4 +156,12 @@ num8btn.addEventListener("click", () => {
 
 num9btn.addEventListener("click", () => {
     clickNumber(9);
+})
+
+clearBtn.addEventListener("click", () => {
+    num1 = "";
+    operator = "";
+    num2 = "";
+
+    display.textContent = "0";
 })
