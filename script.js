@@ -42,7 +42,7 @@ function divide(numOne, numTwo) {
 
 function operate(numOne, numTwo, chosenOperator) {
 
-    if (numOne == 0 || numTwo == 0) {
+    if ((numOne == 0 || numTwo == 0) && operator == "divide") {
         alert("You can not divide by 0 zero, dummy.")
 
         num1 = "";
